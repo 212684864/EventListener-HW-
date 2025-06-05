@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Modern Static Page</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-container">
+      <h1>My Modern Website</h1>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <input type="search" placeholder="Search articles..." />
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="about container">
+      <div class="about-container">
+        <img src="https://picsum.photos/400/300?grayscale" alt="About us image" />
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            We are a passionate team dedicated to delivering high-quality content and exceptional user experience.
+            Our mission is to make information accessible and enjoyable for everyone.
+          </p>
+          <p>
+            With years of experience in the industry, we strive to innovate and inspire through every project we touch.
+          </p>
+          <button id="aboutBtn" class="btn">Learn More</button>
+        </div>
+      </div>
+    </section>
+    <section class="services-toggle container">
+      <h2>Our Services</h2>
+      <p id="service-summary">
+        We provide web design, development, and consulting services tailored to your needs.
+      </p>
+      <div id="more-services" style="display: none;">
+        <ul>
+          <li>Custom Website Development</li>
+          <li>UX/UI Design</li>
+          <li>SEO Optimization</li>
+          <li>Content Strategy</li>
+          <li>Maintenance & Support</li>
+        </ul>
+      </div>
+      <button id="toggle-button" class="btn">Show More</button>
+    </section>
+    <section class="feedback  container">
+      <h2>Feedback</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, neque!</p>
+      <div class="btns">
+        <button id="sendFB" class="btn">Send Feedback</button>
+        <button id="disableFB" class="btn-gray">Disable Feedback</button>
+        <p id="FBAnswer"></p>
+      </div>
+    </section>
+    <section class="partners" id="partners">
+      <div class="container">
+        <h2>Our Partners</h2>
+        <div class="partners-grid">
+          <div class="partner-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="Google logo">
+            <h3>Google</h3>
+            <p>Search & Cloud Services</p>
+            <a href="https://www.google.com" target="_blank">Visit</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft logo">
+            <h3>Microsoft</h3>
+            <p>Software & Cloud Platform</p>
+            <a href="https://www.microsoft.com" target="_blank">Visit</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Amazon logo">
+            <h3>Amazon</h3>
+            <p>E-commerce & AWS Services</p>
+            <a href="https://www.amazon.com" target="_blank">Visit</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Facebook logo">
+            <h3>Meta</h3>
+            <p>Social & VR Technology</p>
+            <a href="https://www.meta.com" target="_blank">Visit</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="Apple logo">
+            <h3>Apple</h3>
+            <p>Devices & Ecosystem</p>
+            <a href="https://www.apple.com" target="_blank">Visit</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733590.png" alt="Netflix logo">
+            <h3>Netflix</h3>
+            <p>Streaming & Entertainment</p>
+            <a href="https://www.netflix.com" target="_blank">Visit</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn logo">
+            <h3>LinkedIn</h3>
+            <p>Professional Network</p>
+            <a href="https://www.linkedin.com" target="_blank">Visit</a>
+          </div>
+          <div class="partner-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube logo">
+            <h3>YouTube</h3>
+            <p>Video platform for content creators</p>
+            <a href="https://www.youtube.com" target="_blank">Visit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Featured Articles</h2>
+      <div class="articles">
+        <div class="card">
+          <img src="https://picsum.photos/400/200?random=1" alt="Article 1">
+          <div class="card-content">
+            <h3>Article One</h3>
+            <p>Quick intro about the first article.</p>
+            <button class="btn"
+              onclick="openModal('Article One', 'This is the full text of Article One. It goes into more detail about the topic.')">Read
+              More</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/400/200?random=2" alt="Article 2">
+          <div class="card-content">
+            <h3>Article Two</h3>
+            <p>A short description of the second article.</p>
+            <button class="btn"
+              onclick="openModal('Article Two', 'Full content of the second article shown in a popup.')">Read
+              More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 My Modern Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="articleModal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle">Title</h2>
+      <p id="modalText">Content</p>
+    </div>
+  </div>
+
+
+  <script src="js.js"></script>
+
+</body>
+
+</html>
